@@ -17,6 +17,6 @@
 ## 問題集
 收集各種資料結構的題目運用
 
-|類別|題目來源| 描述| 程式|
+|類別|可參考題目| 描述| 程式|
 | --- | --- | --- | --- |
 |排序問題| [Hackerrank- Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem)| 利用mergeSort數有幾個inversions，若是題目改問bubble Sort或是insertsion Sort需要交換的次數為幾次，答案與inversions的個數是相同的| [countInversions](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/countInversions.cpp) |
