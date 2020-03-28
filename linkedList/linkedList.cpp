@@ -1,26 +1,32 @@
 #include <iostream>
 using namespace std;
 
-class ListNode{
+class ListNode {
 public:
-    ListNode():data(0),next(0){};
-    ListNode(int a):data(a),next(0){};
+    ListNode() :data(0), next(0) {};
+    ListNode(int a) :data(a), next(0) {};
     int data;
-    ListNode *next;
+    ListNode* next;
 };
 
-class LinkedList{
+class LinkedList {
+private:
+    int sz; //計錄list的大小方便維護
 public:
-    LinkedList():head(0){};
-    ListNode *head;            // list的第一個node
+    LinkedList() :head(0), tail(0), sz(0) {};
+    ListNode* head;            // list的第一個node
+    ListNode* tail;            // list的第一個node
     void printList();           // 印出list的所有資料，用來除錯
+    void insertHead(int data); //在list起頭插入元素
     void insertTail(int data); //在list尾巴插入元素
     void insert(int data, int position);   //在特定位置後插入元素
-    void Delete(int position);         // 刪除特定位置的元素
+    void DeleteHead();     // 刪除list起頭的元素
+    void Delete(int position);  // 刪除特定位置的元素
+    void size();
 };
 
-void LinkedList::printList(){
-    ListNode *node = head;
+void LinkedList::printList() {
+    ListNode* node = head;
     while (node) {
         cout << node->data;
         node = node->next;
@@ -31,41 +37,89 @@ void LinkedList::printList(){
     cout << endl;
 }
 
-void LinkedList::insertTail(int data){
-    ListNode *node = new ListNode(data);
-    if(!head){
-        head=node;
+
+void LinkedList::insertHead(int data) {
+    ListNode* node = new ListNode(data);
+    if (!head) {
+        tail = node;
     }
-    else{
-        ListNode *tail = head;
-        while(tail->next){
-            tail=tail->next;   
+    else {
+        node->next = head;
+    }
+    head = node;
+    sz++;
+}
+
+void LinkedList::insertTail(int data) {
+    ListNode* node = new ListNode(data);
+    if (!head) {
+        head = node;
+    }
+    else {
+        tail->next = node;
+    }
+    tail = node;
+    sz++;
+}
+
+//注意pos=0時等同insertHead，pos=list長度時等同insertTail，若pos>list長度則不做事
+void LinkedList::insert(int data, int position) {
+    if (position == 0) {
+        insertHead(data); //插入頭
+    }
+    else if (position == sz) {
+        insertTail(data); //插入尾巴
+    }
+    else if (position > sz) {
+        return;
+    }
+    else {
+        ListNode* node = new ListNode(data); //欲插入的元素
+        ListNode* in = head;
+        for (int i = 0; i < position - 1; i++) {
+            in = in->next;
         }
-        tail->next=node;
+        node->next = in->next;
+        in->next = node;
+        sz++;
     }
 }
 
-void LinkedList::insert(int data, int position){
-    ListNode *node = new ListNode(data); //欲插入的元素
-    ListNode *prev = head;
-    for(int i=0; i<position-1; i++){
-        prev=prev->next;
+void LinkedList::DeleteHead() {
+    if (sz == 0) {
+        return;
     }
-    node->next=prev->next;
-    prev->next=node;
+    head = head->next;
+    if (!head) {
+        tail = NULL;
+    }
+    sz--;
 }
 
-void LinkedList::Delete(int position){
-    if(position==0){
-        head = head->next; //處理要刪除位置就是head的情況
+
+
+void LinkedList::Delete(int position) {
+    if (position == 0) {
+        DeleteHead(); //刪除頭
     }
-    ListNode *prev = head;
-    for(int i=0; i<position-1; i++){
-        prev=prev->next;
+    else if (position > sz - 1) {
+        return;
     }
-    ListNode *node = prev->next;
-    prev->next=node->next;
-    node->next=NULL;    
+    else {
+        ListNode* prev = head;
+        for (int i = 0; i < position - 1; i++) {
+            prev = prev->next;
+        }
+        ListNode* node = prev->next;
+        prev->next = node->next;
+        sz--;
+    }
+
+}
+
+
+void LinkedList::size() {
+    std::cout << sz << std::endl;
 }
 
 int main()
@@ -77,7 +131,10 @@ int main()
     L.insertTail(-7);
     L.insertTail(9);
     L.printList();
-    L.insert(88,0);
+    L.insertTail(10);
+    L.insert(5, 5);
+    L.printList();
+    L.insert(88, 0);
     L.printList();
     L.Delete(2);
     L.printList();
