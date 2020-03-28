@@ -21,6 +21,7 @@ public:
     void insertTail(int data); //在list尾巴插入元素
     void insert(int data, int position);   //在特定位置後插入元素
     void DeleteHead();     // 刪除list起頭的元素
+    void DeleteTail();     // 刪除list尾巴的元素
     void Delete(int position);  // 刪除特定位置的元素
     void size();
 };
@@ -36,6 +37,7 @@ void LinkedList::printList() {
     }
     cout << endl;
 }
+
 
 
 void LinkedList::insertHead(int data) {
@@ -96,11 +98,30 @@ void LinkedList::DeleteHead() {
     sz--;
 }
 
+void LinkedList::DeleteTail() {
+    if(sz == 0) {
+        return;
+    }
+    if(sz==1){
+        DeleteHead();
+        return;
+    }
+    ListNode* prev = head;
+    for (int i = 0; i < sz - 2; i++) {
+        prev = prev->next;
+    }
+    prev->next = NULL;
+    tail = prev;
+    sz--;
+}
 
 
 void LinkedList::Delete(int position) {
     if (position == 0) {
         DeleteHead(); //刪除頭
+    }
+    else if (position == sz - 1) {
+        DeleteTail(); //刪除尾巴
     }
     else if (position > sz - 1) {
         return;
@@ -137,6 +158,9 @@ int main()
     L.insert(88, 0);
     L.printList();
     L.Delete(2);
+    L.DeleteTail();
+    L.printList();
+    L.insertTail(3);
     L.printList();
     return 0;
 }
