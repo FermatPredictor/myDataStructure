@@ -20,3 +20,4 @@
 |類別|可參考題目| 描述| 程式|
 | --- | --- | --- | --- |
 |排序問題| [Hackerrank- Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem)| 利用mergeSort數有幾個inversions，若是題目改問bubble Sort或是insertsion Sort需要交換的次數為幾次，答案與inversions的個數是相同的| [countInversions](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/countInversions.cpp) |
+|circular linked list| [CodeWar- Josephus Survivor](https://www.codewars.com/kata/555624b601231dc7a400017a/cpp)| Josephus問題，原本有編號1,2,...,n個人，每k個人殺一人，求最後倖存者的編號|[josephus](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/josephus.cpp)|
