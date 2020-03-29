@@ -11,19 +11,20 @@ public:
 
 class LinkedList {
 private:
-    int sz; //計錄list的大小方便維護
+    int sz; //記錄list的大小方便維護
 public:
     LinkedList() :head(0), tail(0), sz(0) {};
     ListNode* head;            // list的第一個node
-    ListNode* tail;            // list的第一個node
+    ListNode* tail;            // list的最後一個node
     void printList();           // 印出list的所有資料，用來除錯
+    int get(int index); //取得LinkedList的第index個node的值(如果index在範圍外回傳-1)
     void insertHead(int data); //在list起頭插入元素
     void insertTail(int data); //在list尾巴插入元素
     void insert(int data, int position);   //在特定位置後插入元素
     void DeleteHead();     // 刪除list起頭的元素
     void DeleteTail();     // 刪除list尾巴的元素
     void Delete(int position);  // 刪除特定位置的元素
-    void size();
+    int size();
 };
 
 void LinkedList::printList() {
@@ -38,6 +39,17 @@ void LinkedList::printList() {
     cout << endl;
 }
 
+
+int LinkedList::get(int index) {
+    if(index<0 || index>=sz){
+        return -1;
+    }
+    ListNode* node = head;
+    for(int i=0 ; i<index; i++){
+        node = node->next;
+    }
+    return node->data;        
+}
 
 
 void LinkedList::insertHead(int data) {
@@ -139,8 +151,8 @@ void LinkedList::Delete(int position) {
 }
 
 
-void LinkedList::size() {
-    std::cout << sz << std::endl;
+int LinkedList::size() {
+    return sz;
 }
 
 int main()
@@ -162,5 +174,6 @@ int main()
     L.printList();
     L.insertTail(3);
     L.printList();
+    std::cout << L.get(0) << std::endl;
     return 0;
 }
