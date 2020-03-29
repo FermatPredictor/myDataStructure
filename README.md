@@ -5,14 +5,14 @@
 
 ## 資料結構
 
-| 資料結構/演算法 | 程式 |
-| --- | --- |
+| 資料結構/演算法 | 程式 | 可參考題目(驗證程式正確性)|
+| --- | --- | --- |
 | 排序問題 | [mergeSort](https://github.com/FermatPredictor/myDataStructure/blob/master/Sorting/mergeSort.cpp) |
-| Heap | [heap](https://github.com/FermatPredictor/myDataStructure/blob/master/heap/heap.cpp) |
-|LinkedList|[linkedList](https://github.com/FermatPredictor/myDataStructure/blob/master/linkedList/linkedList.cpp)|
-|LinkedList|[doubleLinkedList](https://github.com/FermatPredictor/myDataStructure/blob/master/linkedList/doubleLinkedList.cpp)|
-|Stack|[stack](https://github.com/FermatPredictor/myDataStructure/blob/master/Stack/stack.cpp)|
-|Queue|[queue](https://github.com/FermatPredictor/myDataStructure/blob/master/Queue/queue.cpp)|
+| Heap | [heap](https://github.com/FermatPredictor/myDataStructure/blob/master/heap/heap.cpp) | |
+|LinkedList|[linkedList](https://github.com/FermatPredictor/myDataStructure/blob/master/linkedList/linkedList.cpp)| [LeetCode- 707. Design Linked List](https://leetcode.com/problems/design-linked-list/) |
+|LinkedList|[doubleLinkedList](https://github.com/FermatPredictor/myDataStructure/blob/master/linkedList/doubleLinkedList.cpp)| [LeetCode- 707. Design Linked List](https://leetcode.com/problems/design-linked-list/) |
+|Stack|[stack](https://github.com/FermatPredictor/myDataStructure/blob/master/Stack/stack.cpp)| |
+|Queue|[queue](https://github.com/FermatPredictor/myDataStructure/blob/master/Queue/queue.cpp)|[Hackerrank- Queue using Two Stacks](https://www.hackerrank.com/challenges/queue-using-two-stacks/problem)|
 
 ## 問題集
 收集各種資料結構的題目運用
