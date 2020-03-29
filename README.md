@@ -12,7 +12,8 @@
 |LinkedList|[linkedList](https://github.com/FermatPredictor/myDataStructure/blob/master/linkedList/linkedList.cpp)| [LeetCode- 707. Design Linked List](https://leetcode.com/problems/design-linked-list/) |
 |LinkedList|[doubleLinkedList](https://github.com/FermatPredictor/myDataStructure/blob/master/linkedList/doubleLinkedList.cpp)| [LeetCode- 707. Design Linked List](https://leetcode.com/problems/design-linked-list/) |
 |Stack|[stack](https://github.com/FermatPredictor/myDataStructure/blob/master/Stack/stack.cpp)| |
-|Queue|[queue](https://github.com/FermatPredictor/myDataStructure/blob/master/Queue/queue.cpp)|[Hackerrank- Queue using Two Stacks](https://www.hackerrank.com/challenges/queue-using-two-stacks/problem)|
+|Queue|[queue](https://github.com/FermatPredictor/myDataStructure/blob/master/Queue/queue.cpp) (用array實作)|[Hackerrank- Queue using Two Stacks](https://www.hackerrank.com/challenges/queue-using-two-stacks/problem)|
+|Queue|[queue_impleByList](https://github.com/FermatPredictor/myDataStructure/blob/master/Queue/queue_impleByList.cpp) (用list實作)|[Hackerrank- Queue using Two Stacks](https://www.hackerrank.com/challenges/queue-using-two-stacks/problem)|
 
 ## 問題集
 收集各種資料結構的題目運用
