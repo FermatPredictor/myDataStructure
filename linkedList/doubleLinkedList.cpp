@@ -16,16 +16,17 @@ private:
 public:
     DoublyLinkedList() :head(0), tail(0), sz(0) {};
     DoublyListNode* head;            // list的第一個node
-    DoublyListNode* tail;            // list的第一個node
+    DoublyListNode* tail;            // list的最後一個node
     void printList();           // 印出list的所有資料，用來除錯
     void printReverseList();    // 倒序印出list的所有資料，用來除錯
+    int get(int index); //取得LinkedList的第index個node的值(如果index在範圍外回傳-1)
     void insertHead(int data); //在list起頭插入元素
     void insertTail(int data); //在list尾巴插入元素
     void insert(int data, int position);   //在特定位置後插入元素
     void DeleteHead();     // 刪除list起頭的元素
     void DeleteTail();     // 刪除list尾巴的元素
     void Delete(int position);  // 刪除特定位置的元素
-    void size();
+    int size();
 };
 
 void DoublyLinkedList::printList() {
@@ -50,6 +51,17 @@ void DoublyLinkedList::printReverseList() {
         }
     }
     cout << endl;
+}
+
+int DoublyLinkedList::get(int index) {
+    if(index<0 || index>=sz){
+        return -1;
+    }
+    DoublyListNode* node = head;
+    for(int i=0 ; i<index; i++){
+        node = node->next;
+    }
+    return node->data;        
 }
 
 
@@ -157,8 +169,8 @@ void DoublyLinkedList::Delete(int position) {
 }
 
 
-void DoublyLinkedList::size() {
-    std::cout << sz << std::endl;
+int DoublyLinkedList::size() {
+    return sz;
 }
 
 int main()
@@ -181,5 +193,6 @@ int main()
     L.Delete(2);
     L.printList();
     L.printReverseList();
+    std::cout << L.get(0) << std::endl;
     return 0;
 }
