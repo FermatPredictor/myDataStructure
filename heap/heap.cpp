@@ -8,7 +8,7 @@ class Heap
 private:
     void heapify();
 public:
-	Heap() = default;
+    Heap() = default;
     Heap(vector<int> vec):arr(vec){heapify();};
     vector<int> arr;
     void insert(int data);
