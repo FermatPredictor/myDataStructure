@@ -7,6 +7,7 @@
 
 | 資料結構/演算法 | 程式 | 可參考題目(驗證程式正確性)|
 | --- | --- | --- |
+| 二分搜索 | [binarySearch](https://github.com/FermatPredictor/myDataStructure/blob/master/BinarySearch/binarySearch.cpp) | [LeetCode- 34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)|
 | 排序問題 | [mergeSort](https://github.com/FermatPredictor/myDataStructure/blob/master/Sorting/mergeSort.cpp) |[zerojudge- a233: 排序法~~~ 挑戰極限](https://zerojudge.tw/ShowProblem?problemid=a233)|
 | Heap | [heap](https://github.com/FermatPredictor/myDataStructure/blob/master/heap/heap.cpp) | |
 |LinkedList|[linkedList](https://github.com/FermatPredictor/myDataStructure/blob/master/linkedList/linkedList.cpp)| [LeetCode- 707. Design Linked List](https://leetcode.com/problems/design-linked-list/) |
