@@ -34,6 +34,19 @@ int binarySearch_last(std::vector<int>& vec, int target)
     return !vec.empty() && vec[right]==target?right:-1;
 }
 
+//函數功能: 回傳在nums中，第一個大於或等於目標值的位置
+int firstGreaterEqual(vector<int>& nums, int target) {
+    int left = 0, right = nums.size();
+    while (left < right) {
+        int mid = left + (right - left) / 2;
+        if (nums[mid] < target) 
+            left = mid + 1;
+        else
+            right = mid;
+    }
+    return right;
+}
+
 int main()
 {
     vector<int> v = {1,3,15,15,26,35,35,35,88,125};
