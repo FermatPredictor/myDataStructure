@@ -102,7 +102,7 @@ vector<T> Heap<T>::HeapSort() {
 int main()
 {
     vector<Node> vec = { Node(1),Node(5),Node(6),Node(3),Node(2),Node(8),Node(10),Node(7)};
-    Heap heap(vec);
+    Heap<Node> heap(vec);
     vec = heap.HeapSort();
     for (int i = 0; i < vec.size(); i++)
         cout << vec[i].data << " " ;
