@@ -26,7 +26,7 @@ public:
     Heap(vector<T> vec):arr(vec){heapify();};
     vector<T> arr;
     void insert(T node);
-    T get_min();
+    T* get_min();
     void extract_min();
     vector<T> HeapSort();
 };
@@ -62,8 +62,9 @@ void Heap<T>::insert(T data)
 }
 
 template <typename T>
-T Heap<T>::get_min() {
-    return !arr.empty()? arr[0]: 0;
+T* Heap<T>::get_min()
+{
+    return !arr.empty()?&arr[0]:NULL;
 }
 
 //拿走最小的元素，若heap為空不做事
