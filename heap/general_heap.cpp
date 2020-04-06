@@ -94,7 +94,7 @@ vector<T> Heap<T>::HeapSort() {
     int sz = arr.size(); //元素個數
     vector<T> vec;
     for (int i = 0; i < sz; i++) {
-        vec.push_back(get_min());
+        vec.push_back(*get_min());
         extract_min();
     }
     return vec;
