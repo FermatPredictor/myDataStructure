@@ -28,6 +28,7 @@
 |類別|可參考題目| 描述| 程式|
 | --- | --- | --- | --- |
 |排序問題| [Hackerrank- Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem)| 利用mergeSort數有幾個inversions，若是題目改問bubble Sort或是insertsion Sort需要交換的次數為幾次，答案與inversions的個數是相同的| [countInversions](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/countInversions.cpp) |
+|heap| [LeetCode 373. Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)|nums1, nums2 是兩個排序好的陣列，求前k個總和最小的數對|[n_smallest_pair](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/n_smallest_pair.cpp)|
 |linked list| (暫無) | linked list的經典運用之一是做多項式的加、乘法，之所以不用陣列，是因為可能多項式的項數很少但最高次方很大 |[polynomial_list](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/polynomial_list.cpp)|
 |circular linked list| [CodeWar- Josephus Survivor](https://www.codewars.com/kata/555624b601231dc7a400017a/cpp)| Josephus問題，原本有編號1,2,...,n個人，每k個人殺一人，求最後倖存者的編號|[josephus](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/josephus.cpp)|
 |Stack|[zerojude- e924: pC. 括號配對](https://zerojudge.tw/ShowProblem?problemid=e924)|判斷輸入的字串的括號配對是否正確，要檢查的括號有圓括號 ()、方括號 []、小於大於括號 <> 和曲括號 {}|[parentheses](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/parentheses.cpp)|
