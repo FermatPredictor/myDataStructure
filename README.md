@@ -15,6 +15,7 @@
 |Stack|[stack](https://github.com/FermatPredictor/myDataStructure/blob/master/Stack/stack.cpp)| |
 |Queue|[queue](https://github.com/FermatPredictor/myDataStructure/blob/master/Queue/queue.cpp) (用array實作)|[Hackerrank- Queue using Two Stacks](https://www.hackerrank.com/challenges/queue-using-two-stacks/problem)|
 |Queue|[queue_impleByList](https://github.com/FermatPredictor/myDataStructure/blob/master/Queue/queue_impleByList.cpp) (用list實作)|[Hackerrank- Queue using Two Stacks](https://www.hackerrank.com/challenges/queue-using-two-stacks/problem)|
+|Simple Graph|[simple_graph_adjacency_matrix](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/simple_graph_adjacency_matrix.cpp)||
 
 ## 廣義的資料結構
 在原來的資料結構中，我們都假設放入的資料型態是int，但為了能更廣泛的使用，我們用類別模版改寫，使資料結構能放入其它的物件
