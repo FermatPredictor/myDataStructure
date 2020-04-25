@@ -123,10 +123,11 @@ public:
 
 	}
 
-	// print edges in ascending order
 	void print () {
 		
-		// sorted v_i
+		// 重要: 這邊使用heap是因為題目有要求說要照順序把graph的邊印出來，
+		// 用heap可以快速找到一堆數字的最小值，避免超時
+		// 若用其它排序工具應該也可以
 		Heap h;
 		for (int v_i = 1; v_i <= this->n; v_i++) {
 			
