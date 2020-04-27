@@ -19,7 +19,7 @@
 |Simple Graph|[simple_graph_adjacency_list](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/simple_graph_adjacency_list.cpp)|[12625 - Simple Graph](https://acm.cs.nthu.edu.tw/problem/12625/)|
 |Graph_DFS|[simple_graph_DFS](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/simple_graph_DFS.cpp)|[12626 - Reachable Nodes](https://acm.cs.nthu.edu.tw/problem/12626/)|
 |Graph_BFS|[simple_graph_BFS](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/simple_graph_BFS.cpp)|[12626 - Reachable Nodes](https://acm.cs.nthu.edu.tw/problem/12626/)|
-|BinaryTree遍歷 (用map實作)|[binaryTree](https://github.com/FermatPredictor/myDataStructure/blob/master/Tree/binaryTree.cpp)||
+|BinaryTree遍歷 (用map實作)|[binaryTree](https://github.com/FermatPredictor/myDataStructure/blob/master/Tree/binaryTree.cpp)|[12627 - Binary Tree Traversal](http://140.114.86.238/problem/12627/)|
 
 ## 廣義的資料結構
 在原來的資料結構中，我們都假設放入的資料型態是int，但為了能更廣泛的使用，我們用類別模版改寫，使資料結構能放入其它的物件
