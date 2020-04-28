@@ -74,8 +74,6 @@ int main()
 {  
     vector<int> pre = {7, 10, 2, 5, 4, 6, 3, 9, 8, 1};
     vector<int>  in = {2, 5, 10, 7, 3, 6, 9, 4, 1, 8};
-    vector<int> table = transAtoB(pre, in);
-    
     Node* root = buildTree(pre, in, 0,pre.size()-1, 0, in.size() - 1); 
     cout << "樹的inorder為: " << endl;  
     printInorder(root);  
