@@ -1,29 +1,32 @@
 #include <iostream>
 #include <vector>
+#include <map>
 using namespace std;
 
-/* 函數功能: A, B是兩個陣列，都是1~n 的一種排列，
+
+/* 函數功能: A, B是兩個陣列，彼此為重新排列，
 求A的元素對應到B的相同元素的哪一個index，要求O(n)時間建表
 例: 
-vector<int> A = {2,5,3,1,4};
-vector<int> B = {3,1,4,5,2};
-output: 14023
-
-因為A的1出現在B的index1的位置，
-因為A的2出現在B的index4的位置，…
+vector<int> A = {3,9,20,15,7};
+vector<int> B = {9,3,15,20,7};
+output: 10324
+因為A的第0個元素3出現在B的index1的位置，
+因為A的第1個元素9出現在B的index3的位置，…
 以此類推
 */
 vector<int> transAtoB(const vector<int> &A, const vector<int> &B)
 {
     //建B的反對應表，記錄數字的index
-    vector<int> inverse_B(B.size());
+    //例如 B = {9,3,15,20,7};
+    //則map[9]=0, map[3]=1, ...
+    map<int, int> inverse_B;
     for (int i = 0; i < B.size(); i++) {
-        inverse_B[B[i]-1]=i;
+        inverse_B[B[i]]=i;
     }
     
     vector<int> tableAtoB(A.size());
     for (int i = 0; i < A.size(); i++) {
-        tableAtoB[A[i]-1]= inverse_B[A[i]-1];
+        tableAtoB[i]= inverse_B[A[i]];
     }
     return tableAtoB;
 }
@@ -49,7 +52,7 @@ Node* buildTree(const vector<int> & pre, const vector<int> &in, int pre_left, in
     vector<int> table = transAtoB(pre, in);
   
     Node* node = new Node(pre[pre_left]);
-    int inIndex = table[node->data-1];  //查詢現在的root對應到inorder的哪個index，注意因元素是1~n，查表時要減1
+    int inIndex = table[pre_left];
   
     node->left = buildTree(pre, in, pre_left+1, pre_left+inIndex-in_left, in_left, inIndex - 1);  
     node->right = buildTree(pre, in, pre_left+inIndex-in_left+1, pre_right, inIndex + 1, in_right);  
@@ -72,8 +75,8 @@ void printInorder(Node* node)
 
 int main()  
 {  
-    vector<int> pre = {7, 10, 2, 5, 4, 6, 3, 9, 8, 1};
-    vector<int>  in = {2, 5, 10, 7, 3, 6, 9, 4, 1, 8};
+    vector<int> pre = {3, 9, 20, 15, 7};
+    vector<int>  in = {9, 3, 15, 20, 7};
     Node* root = buildTree(pre, in, 0,pre.size()-1, 0, in.size() - 1); 
     cout << "樹的inorder為: " << endl;  
     printInorder(root);  
