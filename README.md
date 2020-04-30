@@ -19,6 +19,7 @@
 |Simple Graph|[simple_graph_adjacency_list](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/simple_graph_adjacency_list.cpp)|[12625 - Simple Graph](https://acm.cs.nthu.edu.tw/problem/12625/)|
 |Graph_DFS|[simple_graph_DFS](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/simple_graph_DFS.cpp)|[12626 - Reachable Nodes](https://acm.cs.nthu.edu.tw/problem/12626/)|
 |Graph_BFS|[simple_graph_BFS](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/simple_graph_BFS.cpp)|[12626 - Reachable Nodes](https://acm.cs.nthu.edu.tw/problem/12626/)|
+|Simple Weighted Graph|[simple_weighted_graph](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/simple_weighted_graph.cpp)||
 |BinaryTree遍歷 (用map實作)|[binaryTree](https://github.com/FermatPredictor/myDataStructure/blob/master/Tree/binaryTree.cpp)|[12627 - Binary Tree Traversal](http://140.114.86.238/problem/12627/)|
 
 ## 廣義的資料結構
