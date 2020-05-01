@@ -27,7 +27,7 @@
 | 資料結構/演算法 | 程式 | 放進資料結構的物件需重載運算子 |
 | --- | --- | --- |
 | Heap | [general_heap](https://github.com/FermatPredictor/myDataStructure/blob/master/heap/general_heap.cpp) | 小於<，大於>|
-| Graph, BFS (用STL list實作, 可方便改寫成weighted 或 directed graph 的結構)| [general_graph](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/general_graph.cpp) | 無 |
+| Graph, BFS (用STL list實作, 可方便改寫成weighted 或 directed graph 的結構, 可參考題目同上的 12626 - Reachable Nodes)| [general_graph](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/general_graph.cpp) | 無 |
 
 ## 問題集
 收集各種資料結構的題目運用
