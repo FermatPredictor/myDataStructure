@@ -76,7 +76,7 @@ int main()
 {
     vector<int> arr= {1,5,6,3,2,8,10,7};
     long long inversions = mergeSort(arr, 0, arr.size()-1);
-    printArray(arr, arr.size()-1);
+    printArray(arr, arr.size());
     std::cout << inversions << std::endl;
     return 0;
 }
