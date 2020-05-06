@@ -21,6 +21,7 @@
 |Graph_BFS|[simple_graph_BFS](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/simple_graph_BFS.cpp)|[12626 - Reachable Nodes](https://acm.cs.nthu.edu.tw/problem/12626/)|
 |Simple Weighted Graph|[simple_weighted_graph](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/simple_weighted_graph.cpp)||
 |topologicalSort (用indegree的方法實作，可順便判斷一張圖是不是DAG)|[topologicalSort_by_indegree](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/topologicalSort_by_indegree.cpp)|[12628 - DAG Testing](https://acm.cs.nthu.edu.tw/problem/12628/)|
+|topologicalSort (用DFS的方法實作，事後判斷先後順序是否矛盾可判斷一張圖是不是DAG)|[topologicalSort_by_DFS](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/topologicalSort_by_DFS.cpp)|[12628 - DAG Testing](https://acm.cs.nthu.edu.tw/problem/12628/)|
 |BinaryTree遍歷 (用map實作)|[binaryTree](https://github.com/FermatPredictor/myDataStructure/blob/master/Tree/binaryTree.cpp)|[12627 - Binary Tree Traversal](http://140.114.86.238/problem/12627/)|
 
 ## 廣義的資料結構
