@@ -56,6 +56,7 @@
 |類別|可參考題目| 描述| 程式|
 | --- | --- | --- | --- |
 |linked list| (暫無) | linked list的經典運用之一是做多項式的加、乘法，之所以不用陣列，是因為可能多項式的項數很少但最高次方很大 |[polynomial_list](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/polynomial_list.cpp)|
+|single linked list| [LeetCode- 328. Odd Even Linked List] | 將linked list中奇數位置的node都移至偶數位置的node前面 |[Code](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/328.cpp)|
 |circular linked list| [CodeWar- Josephus Survivor](https://www.codewars.com/kata/555624b601231dc7a400017a/cpp)| Josephus問題，原本有編號1,2,...,n個人，每k個人殺一人，求最後倖存者的編號|[josephus](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/josephus.cpp)|
 
 ## Stack
