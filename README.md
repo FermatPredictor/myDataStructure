@@ -40,17 +40,38 @@
 | Graph, BFS (用STL list實作, 可方便改寫成weighted 或 directed graph 的結構, 可參考題目同上的 12626 - Reachable Nodes)| [general_graph](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/general_graph.cpp) | 無 |
 
 ## 問題集
-收集各種資料結構的題目運用
+分門類別收集各種資料結構的題目運用
 
+## 排序
 |類別|可參考題目| 描述| 程式|
 | --- | --- | --- | --- |
 |排序問題| [Hackerrank- Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem)| 利用mergeSort數有幾個inversions，若是題目改問bubble Sort或是insertsion Sort需要交換的次數為幾次，答案與inversions的個數是相同的| [countInversions](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/countInversions.cpp) |
+
+## heap
+|類別|可參考題目| 描述| 程式|
+| --- | --- | --- | --- |
 |heap| [LeetCode 373. Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)|nums1, nums2 是兩個排序好的陣列，求前k個總和最小的數對|[n_smallest_pair](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/n_smallest_pair.cpp)|
+
+## linked list
+|類別|可參考題目| 描述| 程式|
+| --- | --- | --- | --- |
 |linked list| (暫無) | linked list的經典運用之一是做多項式的加、乘法，之所以不用陣列，是因為可能多項式的項數很少但最高次方很大 |[polynomial_list](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/polynomial_list.cpp)|
 |circular linked list| [CodeWar- Josephus Survivor](https://www.codewars.com/kata/555624b601231dc7a400017a/cpp)| Josephus問題，原本有編號1,2,...,n個人，每k個人殺一人，求最後倖存者的編號|[josephus](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/josephus.cpp)|
+
+## Stack
+|類別|可參考題目| 描述| 程式|
+| --- | --- | --- | --- |
 |Stack|[zerojude- e924: pC. 括號配對](https://zerojudge.tw/ShowProblem?problemid=e924)|判斷輸入的字串的括號配對是否正確，要檢查的括號有圓括號 ()、方括號 []、小於大於括號 <> 和曲括號 {}|[parentheses](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/parentheses.cpp)|
 |Stack|[zerojudge- a017: 五則運算](https://zerojudge.tw/ShowProblem?problemid=a017)|計算字串四則運算的結果。(解法: 先將字串的infix表達式轉postfix再計算)|[eval](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/eval.cpp)|
+
+## BFS
+|類別|可參考題目| 描述| 程式|
+| --- | --- | --- | --- |
 |BFS|[zerojude- a982: 迷宮問題#1](https://zerojudge.tw/ShowProblem?problemid=a982)|計算從起點走到終點的最短步數|[maze](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/maze.cpp)|
 |BFS|[zerojude- d406: 倒水時間](https://zerojudge.tw/ShowProblem?problemid=d406)|走迷宮，將BFS拜訪過的點與起點的距離全記下來|[maze_with_distance](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/maze_with_distance.cpp)|
+
+## Tree
+|類別|可參考題目| 描述| 程式|
+| --- | --- | --- | --- |
 |BinaryTree|[LeetCode- 105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)|經典題型: 給你binaryTree的preorder和inorder，將原本的樹建出來|[binaryTree_in_pre](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/binaryTree_in_pre.cpp)|
 |BinaryTree|[LeetCode- 124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)|找二元樹的最大路徑和|[BinaryTree_MaxPathSum](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/BinaryTree_MaxPathSum.cpp)|
