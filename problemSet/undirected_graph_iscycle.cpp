@@ -46,9 +46,9 @@ public:
     
     //檢測一張圖是否有cycle
     bool isCyclic(){
-        vector<bool> visited(n, false);
+        vector<bool> visited(n+1, false);
         // DFS
-        for (int u = 1; u < n; u++){
+        for (int u = 1; u <= n; u++){
             if (!visited[u]){
                 if (isCyclicUtil(u, visited, -1)){
                     return true; //找到任一cycle就算有cycle
