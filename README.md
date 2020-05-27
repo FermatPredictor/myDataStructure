@@ -81,4 +81,4 @@
 |類別|可參考題目| 描述| 程式|
 | --- | --- | --- | --- |
 |undirected Graph|(暫無)|判斷一個無向圖裡面是否有cycle|[undirected_graph_iscycle](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/undirected_graph_iscycle.cpp)|
-|undirected Graph|[leetcode- 886. Possible Bipartition](https://leetcode.com/problems/possible-bipartition/)|判斷一個無向圖是否為Bipartite graph|[undirected_graph_isbipartite](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/undirected_graph_isbipartite.cpp)|
+|undirected Graph|[leetcode- 785. Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/), [leetcode- 886. Possible Bipartition](https://leetcode.com/problems/possible-bipartition/)|判斷一個無向圖是否為Bipartite graph|[undirected_graph_isbipartite](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/undirected_graph_isbipartite.cpp)|
