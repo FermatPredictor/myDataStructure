@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-//ref: https://www.geeksforgeeks.org/avl-tree-set-1-insertion/
 
 struct Node
 {
