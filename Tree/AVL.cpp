@@ -1,43 +1,38 @@
 #include <iostream>
 using namespace std;
 
-struct Node
-{
-
-    int height;
-    size_t key;
-    Node *left, *right;
-
-    // create a node with key
-    Node (size_t key):height(1), key(key), left(NULL), right(NULL) {};
-
-    ~Node ()
-    {
-        if (this->left != NULL)
-            delete this->left;
-        if (this->right != NULL)
-            delete this->right;
-    }
-
-};
-
-
 // AVL tree
-struct AVL
+class AVL
 {
+    struct Node
+    {
+        int height;
+        int key;
+        Node *left, *right;
+        // create a node with key
+        Node(int key):height(1), key(key), left(NULL), right(NULL){};
+
+    };
 
     // node of binary tree
 
     Node *root;
 
-    // create a empty AVL tree
-    AVL (): root(NULL) {};
-
-    ~AVL()
+    int height(Node *v)
     {
-        if (this->root == NULL)
-            delete this->root;
+        return v==NULL?0:v->height;
     }
+
+    int getBalance(Node *v)
+    {
+        return v==NULL?0:height(v->left) - height(v->right);
+    }
+
+    void update_height(Node *node)
+    {
+        node->height = max(height(node->left), height(node->right))+1;
+    }
+
     /*
     *      u O            O v
     *       / \          / \
@@ -45,27 +40,13 @@ struct AVL
     *     / \              / \
     *    ^   ^            ^   ^
     */
-
-    int height(Node *v)
-    {
-        return ((v==NULL)?0:v->height);
-    }
-
-    int getBalance(Node *v)
-    {
-        return (v==NULL?0:(height(v->left) - height(v->right)));
-    }
-
     Node* L_rotate (Node *v)
     {
-
         Node *u = v->right;
         v->right = u->left;
         u->left = v;
-
-        v->height = max(height(v->left), height(v->right))+1;
-        u->height = max(height(u->left), height(u->right))+1;
-
+        update_height(v);
+        update_height(u);
         return u;
     }
 
@@ -78,21 +59,18 @@ struct AVL
     */
     Node* R_rotate (Node *v)
     {
-
         Node *u = v->left;
         v->left = u->right;
         u->right = v;
-
-        v->height = max(height(v->left), height(v->right))+1;
-        u->height = max(height(u->left), height(u->right))+1;
+        update_height(v);
+        update_height(u);
         return u;
-
     }
 
 
     Node* _insert(Node* node, int key)
     {
-        /* 1. Perform the normal BST insertion */
+        // 1. 用正常的BST插入法
         if (node == NULL)
             return new Node(key);
 
@@ -103,50 +81,41 @@ struct AVL
         else // Equal keys are not allowed in BST
             return node;
 
-        /* 2. Update height of this ancestor node */
-        node->height = 1 + max(height(node->left),
-                               height(node->right));
+        // 2. 更新node的高度 */
+        update_height(node);
 
-        /* 3. Get the balance factor of this ancestor
-            node to check whether this node became
-            unbalanced */
+        // 3. 計算node的 balance factor以檢查樹有沒有不平衡
         int balance = getBalance(node);
 
-        // If this node becomes unbalanced, then
-        // there are 4 cases
-
-        // Left Left Case
-        if (balance > 1 && key < node->left->key)
-            return R_rotate(node);
-
-        // Right Right Case
-        if (balance < -1 && key > node->right->key)
-            return L_rotate(node);
-
-        // Left Right Case
-        if (balance > 1 && key > node->left->key)
-        {
-            node->left = L_rotate(node->left);
-            return R_rotate(node);
+        // 不平衡的樹有四種情形: LL, LR, RR, RL
+        if (balance > 1){
+            if(key < node->left->key){// Left Left Case
+                return R_rotate(node); 
+            }
+            else{ // Left Right Case
+                node->left = L_rotate(node->left); 
+                return R_rotate(node);
+            }
         }
-
-        // Right Left Case
-        if (balance < -1 && key < node->right->key)
-        {
-            node->right = R_rotate(node->right);
-            return L_rotate(node);
+        if(balance < -1){
+            if(key > node->right->key){ // Right Right Case
+                return L_rotate(node);
+            }
+            else{ // Right Left Case
+                node->right = R_rotate(node->right);
+                return L_rotate(node); 
+            }
         }
-
-        /* return the (unchanged) node pointer */
-        return node;
+        return node; //回傳原本的node pointer
     }
 
+public:
+    AVL (): root(NULL) {};
 
     // insert key into AVL tree
-    void insert (size_t key)
+    void insert (int key)
     {
-
-        this->root = this->_insert(this->root, key);
+        root = _insert(root, key);
     }
 
     // return predecessor of key in BST
@@ -204,7 +173,6 @@ int main ()
             break;
         }
     }
-
     cout << sum << endl;
     return 0;
 
