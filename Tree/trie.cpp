@@ -95,5 +95,6 @@ int main()
     }
     cout<< obj->search("ap")<<endl;
     cout<< obj->startsWith("ap")<<endl;
+    cout<< obj->count_startsWith("ap")<<endl;
 
 }
