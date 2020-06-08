@@ -31,6 +31,7 @@
 | 資料結構/演算法 | 程式 | 可參考題目(驗證程式正確性)|
 | --- | --- | --- |
 | Trie (Prefix Tree) | [trie](https://github.com/FermatPredictor/myDataStructure/blob/master/Tree/trie.cpp) | [LeetCode- 208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) |
+| Suffix Tree(這邊直接用trie來做) | [suffix_tree](https://github.com/FermatPredictor/myDataStructure/blob/master/Tree/suffix_tree.cpp) ||
 
 ## 廣義的資料結構
 在原來的資料結構中，我們都假設放入的資料型態是int，但為了能更廣泛的使用，我們用類別模版改寫，使資料結構能放入其它的物件
