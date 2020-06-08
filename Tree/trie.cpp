@@ -1,71 +1,57 @@
 #include <string>
-#include <vector>
+#include <unordered_map>
 #include <iostream>
 using namespace std;
 
-class Trie
-{
-
-    class TrieNode
-    {
+class Trie {
+    
+    class TrieNode {
     public:
-        vector<TrieNode *> child; //子節點有a~z共26種可能，初始設為null
+        unordered_map<char, TrieNode *> child;
         bool isWord; //記錄某點是否為單字的結尾
-        TrieNode(): isWord(false), child(vector<TrieNode *>(26, NULL)) {};
+        TrieNode(): isWord(false){};
     };
-
+    
     TrieNode* root; //root為一個空的節點
-
+    
 public:
     /** Initialize your data structure here. */
     Trie(): root(new TrieNode()) {};
-
+    
     /** Inserts a word into the trie. */
-    void insert(string word)
-    {
+    void insert(string word) {
         TrieNode *p = root;
-        for (char c : word)
-        {
-            int i = c - 'a';
-            if (!p->child[i])
-            {
-                p->child[i] = new TrieNode();
-            }
-            p = p->child[i];
+        for (char c : word) {
+            if (p->child.find(c)==p->child.end()){
+                p->child[c] = new TrieNode();
+            } 
+            p = p->child[c];
         }
         p->isWord = true;
     }
-
+    
     /** Returns if the word is in the trie. */
-    bool search(string word)
-    {
+    bool search(string word){
         TrieNode *p = root;
-        for (char c : word)
-        {
-            int i = c - 'a';
-            if (!p->child[i])
-            {
+        for (char c : word) {
+            if (p->child.find(c)==p->child.end()){
                 return false;
             }
-            p = p->child[i];
+            p = p->child[c];
         }
-        return p->isWord;
+        return p->isWord;    
     }
-
+    
     /** Returns if there is any word in the trie that starts with the given prefix. */
-    bool startsWith(string prefix)
-    {
+    bool startsWith(string prefix) {
         TrieNode *p = root;
-        for (char c : prefix)
-        {
-            int i = c - 'a';
-            if (!p->child[i])
-            {
+        for (char c : prefix) {
+            if (p->child.find(c)==p->child.end()){
                 return false;
-            }
-            p = p->child[i];
+            } 
+            p = p->child[c];
         }
-        return true;
+        return true;        
     }
 };
 
