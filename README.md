@@ -18,8 +18,6 @@
 |Queue|[queue_impleByList](https://github.com/FermatPredictor/myDataStructure/blob/master/Queue/queue_impleByList.cpp) (用list實作)|[Hackerrank- Queue using Two Stacks](https://www.hackerrank.com/challenges/queue-using-two-stacks/problem)|
 |Simple Graph|[simple_graph_adjacency_matrix](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/simple_graph_adjacency_matrix.cpp)|[12625 - Simple Graph](https://acm.cs.nthu.edu.tw/problem/12625/)|
 |Simple Graph|[simple_graph_adjacency_list](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/simple_graph_adjacency_list.cpp)|[12625 - Simple Graph](https://acm.cs.nthu.edu.tw/problem/12625/)|
-|Graph_DFS|[simple_graph_DFS](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/simple_graph_DFS.cpp)|[12626 - Reachable Nodes](https://acm.cs.nthu.edu.tw/problem/12626/)|
-|Graph_BFS|[simple_graph_BFS](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/simple_graph_BFS.cpp)|[12626 - Reachable Nodes](https://acm.cs.nthu.edu.tw/problem/12626/)|
 |topologicalSort (用indegree的方法實作，可順便判斷一張圖是不是DAG)|[topologicalSort_by_indegree](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/topologicalSort_by_indegree.cpp)|[leetcode- 210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/submissions/)|
 |topologicalSort (用DFS的方法實作，事後判斷DFS中的完成時間先後是否矛盾可判斷一張圖是不是DAG)|[topologicalSort_by_DFS](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/topologicalSort_by_DFS.cpp)|[leetcode- 210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/submissions/)|
 |BinaryTree遍歷 (用map實作)|[binaryTree](https://github.com/FermatPredictor/myDataStructure/blob/master/Tree/binaryTree.cpp)|[12627 - Binary Tree Traversal](http://140.114.86.238/problem/12627/)|
@@ -38,7 +36,6 @@
 | 資料結構/演算法 | 程式 | 放進資料結構的物件需重載運算子 |
 | --- | --- | --- |
 | Heap | [general_heap](https://github.com/FermatPredictor/myDataStructure/blob/master/heap/general_heap.cpp) | 小於<，大於>|
-| Graph, BFS (用STL list實作, 可方便改寫成weighted 或 directed graph 的結構, 可參考題目同上的 12626 - Reachable Nodes)| [general_graph](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/general_graph.cpp) | 無 |
 
 ## 問題集
 分門類別收集各種資料結構的題目運用
