@@ -84,3 +84,4 @@
 | --- | --- | --- | --- |
 |undirected Graph|(暫無)|判斷一個無向圖裡面是否有cycle|[undirected_graph_iscycle](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/undirected_graph_iscycle.cpp)|
 |undirected Graph|[leetcode- 785. Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/), [leetcode- 886. Possible Bipartition](https://leetcode.com/problems/possible-bipartition/)|判斷一個無向圖是否為Bipartite graph|[undirected_graph_isbipartite](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/undirected_graph_isbipartite.cpp)|
+|Dijkstra's algorithm|(暫無)|判斷一個有向圖從一點出發，到其它點的最短距離|[graph_Dijkstra](https://github.com/FermatPredictor/myDataStructure/blob/master/problemSet/graph_Dijkstra.cpp)|
