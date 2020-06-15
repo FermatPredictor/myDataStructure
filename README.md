@@ -21,7 +21,7 @@
 |topologicalSort (用indegree的方法實作，可順便判斷一張圖是不是DAG)|[topologicalSort_by_indegree](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/topologicalSort_by_indegree.cpp)|[leetcode- 210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/submissions/)|
 |topologicalSort (用DFS的方法實作，事後判斷DFS中的完成時間先後是否矛盾可判斷一張圖是不是DAG)|[topologicalSort_by_DFS](https://github.com/FermatPredictor/myDataStructure/blob/master/Graph/topologicalSort_by_DFS.cpp)|[leetcode- 210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/submissions/)|
 |BinaryTree遍歷 (用map實作)|[binaryTree](https://github.com/FermatPredictor/myDataStructure/blob/master/Tree/binaryTree.cpp)|[12627 - Binary Tree Traversal](http://140.114.86.238/problem/12627/)|
-|BST(實作insert, predecessor, successor)|[BST](https://github.com/FermatPredictor/myDataStructure/blob/master/Tree/BST.cpp)||
+|BST(實作insert, predecessor, successor)|[BST](https://github.com/FermatPredictor/myDataStructure/blob/master/Tree/BST.cpp)|[700. Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/), [701. Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/)|
 |AVL tree(會自我平衡的BST)|[AVL](https://github.com/FermatPredictor/myDataStructure/blob/master/Tree/AVL.cpp)||
 
 ## 高等資料結構
