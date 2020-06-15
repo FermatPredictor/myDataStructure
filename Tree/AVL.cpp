@@ -118,7 +118,7 @@ public:
         root = _insert(root, key);
     }
 
-    // return predecessor of key in BST
+    // 第一個大於key的數字
     int predecessor (int key)
     {
         int pred = 0; // 預設predecessor=0 (predecessor不存在)
@@ -141,6 +141,33 @@ public:
             }
         }
         return pred;
+    }
+
+    // 第一個小於key的數字
+    int successor (int key)
+    {
+        int succ = (1<<31)-1; // 預設successor=無限大
+        Node *node = root;
+
+        while (node != NULL)
+        {
+
+            if (node->key > key)
+            {
+                // update successor
+                if (node->key < succ)
+                {
+                    succ = node->key;
+                }
+                node = node->left; //找有沒有更小的元素大於key
+            }
+            else
+            {
+                node = node->right; //key太小了，往右走
+            }
+
+        }
+        return ((succ < (1<<31)-1) ? succ : 0);
     }
 
 };
