@@ -2,9 +2,9 @@
 using namespace std;
 
 // binary search tree
-struct BST
+class BST
 {
-
+public:
     struct Node
     {
         int key;
@@ -16,45 +16,9 @@ struct BST
     Node *root;
     BST():root(NULL) {};
 
-    // 插入新的key進BST
     void insert (int key)
     {
-
-        if (root == NULL)
-        {
-            root = new Node(key);
-        }
-        else
-        {
-            Node *node = root;
-            while (true)
-            {
-                if (key < node->key)
-                {
-                    if (node->left == NULL)
-                    {
-                        node->left = new Node(key);
-                        break;
-                    }
-                    else
-                    {
-                        node = node->left;
-                    }
-                }
-                else
-                {
-                    if (node->right == NULL)
-                    {
-                        node->right = new Node(key);
-                        break;
-                    }
-                    else
-                    {
-                        node = node->right;
-                    }
-                }
-            }
-        }
+        root = _insert(root, key);
     }
 
     // return predecessor of key in BST
@@ -107,6 +71,25 @@ struct BST
 
         }
         return ((succ < (1<<31)-1) ? succ : 0);
+    }
+
+private:
+    // 插入新的key進BST
+    Node* _insert (Node* root, int key)
+    {
+        if (root == NULL)
+        {
+            return new Node(key);
+        }
+        if (key < root->key)
+        {
+            root->left = _insert(root->left, key);
+        }
+        else
+        {
+            root->right = _insert(root->right, key);
+        }
+        return root;
     }
 };
 
