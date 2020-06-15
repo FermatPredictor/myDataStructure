@@ -118,7 +118,7 @@ public:
         root = _insert(root, key);
     }
 
-    // 第一個大於key的數字
+    // 第一個小於key的數字
     int predecessor (int key)
     {
         int pred = 0; // 預設predecessor=0 (predecessor不存在)
@@ -143,7 +143,7 @@ public:
         return pred;
     }
 
-    // 第一個小於key的數字
+    // 第一個大於key的數字
     int successor (int key)
     {
         int succ = (1<<31)-1; // 預設successor=無限大
